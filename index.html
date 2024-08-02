@@ -9,14 +9,26 @@
     <script>
         // List of URLs to redirect to
         var urls = [
-            "https://www.google.com.ar/",
-            "https://chatgpt.com/",
-            "https://www.youtube.com/"
+            "https://docs.google.com/forms/d/e/1FAIpQLScMayxsGPQdGhPDZR22rG0vDIEsiaJp_GDTHAP6N_B7uwTspA/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSfYN34ehfpk0v5myiOO2pnlF-20GnPhUjBYZyiXl0Hlr8XttQ/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSco-EkYXbjEZBa1VEiBe099SgHgeYrlzWz6aG8uIQg6W5zBJg/viewform?usp=sf_link",            
+            "https://docs.google.com/forms/d/e/1FAIpQLSeA2aZpmfA94zUG06GMTBaMTafBI_AggXIT81v0w_Tnzze6ng/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSez6Z8JnT1BcStdwNE3qZq7Wo8wv291OyuAvMNJqYi0Ih8O0A/viewform?usp=sf_link",            
+            "https://docs.google.com/forms/d/e/1FAIpQLSdARV4LodSFUwX1Pgn_BtAmm-JIJdOLsyiu6VPq4JeF1Zoq7A/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSei2SO_xZP-4tZx6ylP94wfUXfFNbdftUt5bsP9AP37Rn-FxQ/viewform?usp=sf_link",            
+            "https://docs.google.com/forms/d/e/1FAIpQLSej_K21yPKzionfCqCXZO_OOKyn1lHEy1ngPgSzTRjCAjJI2g/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLScgDtN62LFO9W2MWGfX0rWw-cq3QoXnCkgWnbYRfNdkIFQqnQ/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSekKOiw-4zzcmg7VoJ61Qfnjkn3oQxkojccsp2a_bUz83QrRA/viewform?usp=sf_link",            
+            "https://docs.google.com/forms/d/e/1FAIpQLSdnEgVugK8ul00x6ZUoYfwQoHBSq5v0TTIUXyx-rrnRXAk9sA/viewform?usp=sf_link",
+            "https://docs.google.com/forms/d/e/1FAIpQLSfqYcM-8j65qAMR8CdW1Cu0JvB7Y4BYDd4Nk8tKGEeVaeHKNg/viewform?usp=sf_link"
         ];
 
         // Function to redirect randomly
         function randomRedirect() {
-            var randomIndex = Math.floor(Math.random() * urls.length);
+            var randomIndex = Math.round(Math.random() * (urls.length +1) - 0.5);
+            randomIndex = Math.max(0, randomIndex);
+            randomIndex = Math.min(urls.length-1 , randomIndex);
+
             window.location.href = urls[randomIndex];
         }
 
